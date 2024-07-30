@@ -1,0 +1,19 @@
+<div>
+  <.form let={f} for={@changeset}  id="search-post-filter" phx_change="search">
+    <%= text_input(f, :search,
+      placeholder: "Search",
+     
+    ) %>
+  </.form>
+  <h2>
+    Posts
+  </h2>
+
+   <h2>
+    Mbashi
+  </h2>
+  <%= for post <- @posts  do %>
+    <span><%= post.title %></span>
+    <span><%= post.description %></span>
+  <% end %>
+</div>
